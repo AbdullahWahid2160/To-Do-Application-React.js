@@ -1,0 +1,138 @@
+.MainApp {
+  flex-direction: row;
+  border-radius: 25px;
+  background-color: #23736d;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+}
+
+Header {
+  background-color: #24c3b7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 5px 6px rgba(1, 12, 11, 0.15);
+}
+
+h1 {
+  margin: 10px 0px 0px 0px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: #052928;
+  padding: 15px;
+}
+
+p {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 10px 45px;
+  padding: 10px 0px;
+  visibility: hidden;
+}
+
+.ColorPickerContainer {
+  display: flex;
+  margin-bottom: -5px;
+  margin-top: 1rem;
+  align-items: center;
+  margin-right: 30px;
+}
+
+h3 {
+  flex: 25%;
+  font-size: x-large;
+  text-align: center;
+}
+
+#ColorPicker {
+  flex: 50%;
+  background-color: #23736d;
+  height: 4rem;
+  border: transparent;
+  outline: none;
+}
+
+.InputContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0px 0px 0px 30px;
+}
+
+#TextInput {
+  flex: 80%;
+  padding: 20px 50px 20px 50px;
+  margin: 10px 0px 10px 0px;
+  border-radius: 10px;
+  height: 40px;
+  color: black;
+  font-size: 22px;
+  font-weight: 700;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.ColorInput {
+  margin: 0px 0px 0px 5px;
+}
+
+.SubmitButton {
+  flex: 20%;
+  transform: translateX(-30px);
+  background-color: rgba(111, 111, 111, 0.9);
+  border: 0px;
+  cursor: pointer;
+  padding: 20px 20px 20px 20px;
+  margin: 10px 0px 10px 20px;
+  border-radius: 15px;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+.SubmitButton:hover {
+  background-color: rgba(50, 170, 165, 0.9);
+}
+
+.TasksContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  margin: 5px 45px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.TasksList {
+  display: flex;
+
+  font-size: 26px;
+  flex: 10;
+}
+
+.completed,
+.remove {
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  font-size: 28px;
+  border: transparent;
+  outline: none;
+}
+
+.completed:hover {
+  color: rgba(50, 170, 165, 0.8);
+}
+
+.remove:hover {
+  color: rgba(172, 46, 49, 0.8);
+}
