@@ -1,59 +1,30 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
-import "../styles.css";
+import React from 'react';
+import {Task} from './Task';
+import '../styles.css';
 
-var flag = "";
-var DoneList = [];
-
-class CompletedTasks extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      TaskList: []
-    };
-    this.HandleDelete = this.HandleDelete.bind(this);
-  }
-
-  HandleDelete(e) {
-    e.target.parentElement.remove();
-  }
-
-  CreateList(task) {
-    if (task) {
-      return (
-        <div
-          className="TasksContainer"
-          id={task.Key}
-          style={{ backgroundColor: task.Color }}
-        >
-          <li className="TasksList">{task.Text}</li>
-          <button className="remove" onClick={this.HandleDelete}>
-            ✖
-          </button>
-        </div>
-      );
-    } else {
-    }
-  }
-
-  render() {
-    DoneList = this.props.Completed.map((item) => this.CreateList(item));
+export function CompletedTasks({Completed}) {
+  function CreateList(task) {
     return (
       <div>
-        <p
-          className="DoneHeading"
-          style={{
-            visibility: "visible"
-          }}
-        >
-          Completed Successfully!
-        </p>
-        <ul className="DoneUnorderedlist">
-          <div className="done-list-flexbox">{DoneList}</div>
-        </ul>
+        <Task Props={task} Completedtasks={''} />
       </div>
     );
   }
-}
 
-export default CompletedTasks;
+  var DoneList = Completed.map((item) => CreateList(item));
+  return (
+    <div>
+      <p
+        className="DoneHeading"
+        style={{
+          visibility: 'visible',
+        }}
+      >
+        {Completed.length !== 0 ? 'Completed Successfully!' : ''}
+      </p>
+      <ul className="DoneUnorderedlist">
+        <div className="done-list-flexbox">{DoneList}</div>
+      </ul>
+    </div>
+  );
+}
