@@ -22,15 +22,12 @@ class Form extends Component {
   }
 
   CompletedTasksFromPendingList(DataFromPendingList) {
-    console.log("Child se data aya hy jeee : ", DataFromPendingList);
     var Done = this.state.Tasks.map((item) => {
-      console.log("ye hy jee item : ", item);
       if (DataFromPendingList.id == item.Key) {
         return item;
       }
     });
     this.setState({ CompletedTasks: this.state.CompletedTasks.concat(Done) });
-    console.log("Ab bta : ", this.state.CompletedTasks);
     DataFromPendingList.remove();
   }
 
@@ -52,7 +49,6 @@ class Form extends Component {
         Tasks: this.state.Tasks.concat(NewTask)
       });
       event.target.elements.TextInput.value = "";
-      console.log("ye jb Task add hota hy : ", this.state.Tasks);
     }
   }
 
